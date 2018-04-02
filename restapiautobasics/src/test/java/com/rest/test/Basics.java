@@ -19,7 +19,7 @@ public class Basics {
 		// 1. base url
 		RestAssured.baseURI = "https://maps.googleapis.com";
 
-		// parameters
+		// 2. parameters
 		given().param("query", "restaurants+in+Miyapur").param("key", "AIzaSyD05C4l0V-VS-4aM1mY5KQUdUE2xqu-GJo").when()
 				.get("/maps/api/place/textsearch/json").then().assertThat().statusCode(200)
 				.body("results.geometry.location.lat", contains(17.496931));
