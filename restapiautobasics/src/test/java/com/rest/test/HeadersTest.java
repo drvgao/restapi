@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 
-public class VerifyHeaders {
+public class HeadersTest {
 	
 	@Test
 	public void verifyHeader() {

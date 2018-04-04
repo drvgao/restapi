@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.*;
 import org.junit.Test;
 
 
-public class Basics {
+public class BasicTest {
 	@Test
 	public void test_NumberOfCircuitsFor2017Season_ShouldBe20() {
 
