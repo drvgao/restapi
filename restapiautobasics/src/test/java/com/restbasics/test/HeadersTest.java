@@ -1,4 +1,4 @@
-package com.rest.test;
+package com.restbasics.test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;

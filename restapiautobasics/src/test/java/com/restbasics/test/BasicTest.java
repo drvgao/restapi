@@ -1,4 +1,4 @@
-package com.rest.test;
+package com.restbasics.test;
 
 
 import io.restassured.RestAssured;
