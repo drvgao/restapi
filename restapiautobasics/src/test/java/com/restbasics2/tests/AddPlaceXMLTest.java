@@ -1,7 +1,6 @@
 package com.restbasics2.tests;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,7 +14,6 @@ import com.rest.utils.Utils;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 
@@ -25,7 +23,7 @@ import io.restassured.response.Response;
  * @author RDURGAM
  *
  */
-public class AddPlaceXMLFormatTest {
+public class AddPlaceXMLTest {
 	Properties prop;
 
 	@BeforeTest
@@ -71,7 +69,7 @@ public class AddPlaceXMLFormatTest {
 		// 3. grab the placeId to delete the place created above.
 		//TODO extract xml response values
 		XmlPath xmlPath = new XmlPath(res);
-		String placeId = xmlPath.get("place_id");
+		String placeId = xmlPath.get("PlaceAddResponse.place_id");
 		System.out.println("placeid: " + placeId);
 	}
 }

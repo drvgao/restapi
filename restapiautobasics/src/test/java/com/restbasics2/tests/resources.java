@@ -10,4 +10,8 @@ public class resources {
 		public static String addPlacePostResourceXML() {
 			return "/maps/api/place/add/xml";
 		}
+		
+		//near by resource
+		
+		public static String NEAR_PLACES = "";
 }
