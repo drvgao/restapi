@@ -52,7 +52,7 @@ public class DeleteTest2 {
 
 		// 2. create and grab the response
 		Response response = given().queryParam("key", prop.getProperty("KEY")).body(PayLoads.getPlacePayLoad()).when()
-				.post(resources.addPlacePostResource()).then().assertThat().statusCode(200).and()
+				.post(resources.ADDPLACE_POST_RESOURCE).then().assertThat().statusCode(200).and()
 				.contentType(ContentType.JSON).and().body("status", equalTo("OK")).extract().response();
 
 		String res = null;

@@ -30,8 +30,8 @@ public class AddPlaceXMLTest {
 	public void getEnvData() {
 		try {
 			prop = new Properties();
-			FileInputStream fs = new FileInputStream("./src/main/resources/files/env.properties");
-			prop.load(fs);
+			FileInputStream envProp = new FileInputStream("./src/main/resources/files/env.properties");
+			prop.load(envProp);
 			System.out.println("host: " + prop.get("HOST"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -58,7 +58,7 @@ public class AddPlaceXMLTest {
 		
 		// 2. create and grab the response
 		Response response = given().queryParam("key", prop.getProperty("KEY")).body(xmlPostData).when()
-				.post(resources.addPlacePostResourceXML()).then().assertThat().statusCode(200).and()
+				.post(resources.ADDPLACE_POST_RESORUCE_XML).then().assertThat().statusCode(200).and()
 				.contentType(ContentType.XML).and().extract().response();
 
 		String res = null;

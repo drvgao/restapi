@@ -60,7 +60,7 @@ public class AddPlaceXMLTest2 {
 
 		// 2. create and grab the response
 		Response response = given().queryParam("key", prop.getProperty("KEY")).body(xmlPostData).when()
-				.post(resources.addPlacePostResourceXML()).then().assertThat().statusCode(200).and()
+				.post(resources.ADDPLACE_POST_RESORUCE_XML).then().assertThat().statusCode(200).and()
 				.contentType(ContentType.XML).and().extract().response();
 		// 3. grab the placeId to delete the place created above.
 		// TODO extract xml response values
