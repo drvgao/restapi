@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.restbasics.test.BasicTest"/>
+      <class name="com.restbasics3.tests.JsonArray_Log_Test"/>
+      <class name="com.restbasics2.tests.AddPlaceXMLTest"/>
+      <class name="com.rest.jira.JIRA_Login_Test"/>
+      <class name="com.rest.twitter.DeleteTweet"/>
+      <class name="com.restbasics.test.DeleteTest"/>
+      <class name="com.restbasics2.tests.AddPlaceXMLTest2"/>
+      <class name="com.rest.twitter.CreateTweet"/>
+      <class name="com.restbasics.test.PathParamTest"/>
+      <class name="com.rest.twitter.TwitterAPI"/>
+      <class name="com.restbasics.test.HeadersTest"/>
+      <class name="com.rest.jira.JIRA_AddComments"/>
+      <class name="com.restbasics.test.PostQueryParamTest"/>
+      <class name="com.rest.qc.QC_API"/>
+      <class name="com.restbasics2.tests.DeleteTest2"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

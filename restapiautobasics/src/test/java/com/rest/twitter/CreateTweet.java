@@ -13,7 +13,6 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import com.github.scribejava.*;
 import com.rest.utils.Utils;
 public class CreateTweet {
 	Properties prop;

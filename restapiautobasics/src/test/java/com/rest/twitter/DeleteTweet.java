@@ -9,12 +9,13 @@ import java.util.Properties;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import com.rest.utils.Utils;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import com.github.scribejava.*;
-import com.rest.utils.Utils;
+
+
 public class DeleteTweet {
 	Properties prop;
 	String arg0 = null;
@@ -62,7 +63,7 @@ public class DeleteTweet {
 		return tweetid;
 	}
 	
-	@Test
+//	@Test
 	public void deleteTweet() {
 		tweetid= getTweet();
 		System.out.println("about to delete tweet with id, "+tweetid);

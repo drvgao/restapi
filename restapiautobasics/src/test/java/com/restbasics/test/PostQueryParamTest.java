@@ -7,7 +7,12 @@ import static org.hamcrest.Matchers.equalTo;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class PostTest {
+/**
+ * query parameter example
+ * @author RDURGAM
+ *
+ */
+public class PostQueryParamTest {
 
 	@Test
 	public void postTest() {

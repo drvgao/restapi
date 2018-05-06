@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import com.github.scribejava.*;
 public class TwitterAPI {
 	Properties prop;
 	String arg0 = null;
