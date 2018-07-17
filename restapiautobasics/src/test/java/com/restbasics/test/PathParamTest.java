@@ -21,11 +21,12 @@ public class PathParamTest {
 	public void getCountry() {
 		// 1. base url
 		RestAssured.baseURI = "http://restcountries.eu";
-
+		String countryName = "India";
+		System.out.println("Country Name "+countryName);
 		// 2. parameters
 		// Here the key name 'country' must match the url parameter {country}
 		Response response = given()
-		        .pathParam("country", "Finland")
+		        .pathParam("country", countryName)
 		        .when()
 		            .get("/rest/v1/name/{country}")
 		        .then().extract().response();
@@ -39,7 +40,7 @@ public class PathParamTest {
 	/**
 	 * path parameter example with variable
 	 */
-	@Test
+//	@Test
 	public void getCountry2() {
 		String cty = "Finland";
 		// 1. base url

@@ -21,14 +21,15 @@ import io.restassured.response.Response;
  * @author RDURGAM
  *
  */
-public class DeleteTest2 {
+public class DeletePlaceTest2 {
 	Properties prop;
 
 	@BeforeTest
 	public void getEnvData() {
 		try {
 			prop = new Properties();
-			FileInputStream fs = new FileInputStream("./src/main/resources/files/env.properties");
+			//System.getProperty("user.dir") returns dir path till project
+			FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"//src//main//resources//files//env.properties");
 			prop.load(fs);
 			System.out.println("host: " + prop.get("HOST"));
 		} catch (FileNotFoundException e) {
